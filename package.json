@@ -1,0 +1,14 @@
+{
+  "name": "hope-album",
+  "version": "1.0.0",
+  "description": "React app with Strapi for Epic Lab's website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.15.5"
+  }
+}
