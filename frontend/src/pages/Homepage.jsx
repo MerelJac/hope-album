@@ -1,19 +1,30 @@
 import React from "react";
-import {useFetch} from "../hooks/useFetch";
+// import {useFetch} from "../hooks/useFetch";
+import { useQuery, gql } from "@apollo/client";
+
+const ARTISTS_NAME = gql`
+  query GetArtists {
+    artists {
+      data {
+        attributes {
+          Name
+        }
+      }
+    }
+  }
+`;
 
 export default function Homepage() {
-  const { loading, error, data } = useFetch("http://localhost:1337/api/artists");
+    const { loading, error, data } = useQuery(ARTISTS_NAME);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
-    console.log(data.data)
+
   return (
     <div>
-      {data.data.map((artist) => (
+      {data.artists.data.map((artist) => (
         <div key={artist.id}>
           <p>Name: {artist.attributes.Name}</p>
-          <p>Discipline: {artist.attributes.Discipline}</p>
-          {/* Add more fields as needed */}
         </div>
       ))}
     </div>
