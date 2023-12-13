@@ -2,14 +2,17 @@
   "name": "hope-album",
   "version": "1.0.0",
   "description": "React app with Strapi for Epic Lab's website.",
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently \"cd backend && npm start --ignore client\" \"cd client && npm start\"",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@strapi/plugin-graphql": "^4.15.5",
+    "concurrently": "^8.2.1",
     "serve": "^14.2.1"
   }
 }
