@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@strapi/plugin-graphql": "^4.15.5"
+    "@strapi/plugin-graphql": "^4.15.5",
+    "serve": "^14.2.1"
   }
 }
