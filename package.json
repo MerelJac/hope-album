@@ -5,18 +5,11 @@
   "license": "ISC",
   "author": "",
   "main": "index.js",
-  "engines": {
-    "node": "18.14.2",
-    "npm": "9.5.0"
-  },
   "scripts": {
-    "start": "concurrently \"cd backend && npm start --ignore client\" \"cd client && npm start\"",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@strapi/plugin-graphql": "^4.15.5",
-    "concurrently": "^8.2.1",
     "serve": "^14.2.1"
   }
 }
