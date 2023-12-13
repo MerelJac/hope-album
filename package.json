@@ -5,6 +5,10 @@
   "license": "ISC",
   "author": "",
   "main": "index.js",
+  "engines": {
+    "node": "18.14.2",
+    "npm": "9.5.0"
+  },
   "scripts": {
     "start": "concurrently \"cd backend && npm start --ignore client\" \"cd client && npm start\"",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
