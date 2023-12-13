@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend && npm run develop --ignore frontend",
+    "start": "concurrently \"cd backend && npm run develop\" \"cd frontend && npm start\"",
     "develop": "concurrently \"cd backend && npm run develop\" \"cd frontend && npm start\""
   },
   "dependencies": {
